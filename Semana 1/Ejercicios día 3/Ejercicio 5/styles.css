@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.div_padre {
+    height: 500px;
+    width: 300px;
+    background-color: green;
+    padding: 50px;
+    /*border: solid;*/
+    border: outset;
+
+}
+
+.div_hijo {
+    height: 200%;
+    width: 70%;
+    background-color: blue;
+    margin: 50px;
+    /*border: dotted;*/
+    border: ridge;
+
+}
