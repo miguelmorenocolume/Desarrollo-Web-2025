@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    background-color: darkslategrey;
+    flex-direction: column;
+    font-weight: bold;
+    color: #fafafa;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fafafa;
+}
