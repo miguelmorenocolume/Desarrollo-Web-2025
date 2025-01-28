@@ -1,0 +1,89 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    background-color: #1f1f1f;
+    flex-direction: column;
+    font-weight: bold;
+    color: #e0e0e0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #bb86fc;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #3700b3;
+}
+
+h1 {
+    display: flex;
+    font-family: 'Star Wars', sans-serif;
+    color: #bb86fc;
+    font-weight: bold;
+    font-size: 50px;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+h2 {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+button {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3;
+    color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
