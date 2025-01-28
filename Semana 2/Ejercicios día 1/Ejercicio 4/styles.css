@@ -1,0 +1,96 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Univers';
+}
+
+header {
+    display: flex;
+    background-color: darkslategrey;
+    flex-direction: column;
+    font-weight: bold;
+    color: #fafafa;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+h1 {
+    display: flex;
+    font-family: 'Star Wars', sans-serif;
+    color: gold;
+    font-weight: bold;
+    font-size: 50px;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    font-family: "Univers";
+    color: lightskyblue;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#titulo {
+    display: flex;
+    flex-direction: column;
+    background-image: url('src/titulo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 35px;
+    border: 8px solid gold;
+}
+
+p{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#contenido_texto {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    border: 5px solid gold;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#imagenes{
+    display: flex;
+    flex-direction: row;
+    padding: 35px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+#imagenes img {
+    width: calc(33.33% - 10px); 
+    height: auto; 
+}
+
+footer {
+    font-family: "Univers";
+    display: flex;
+    background-image: url('src/titulo.jpg');
+    background-size: cover;
+    justify-content: space-around;
+    color: #fafafa;
+    font-weight: bold;
+    padding: 10px;
+}

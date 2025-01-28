@@ -5,6 +5,7 @@ header {
     font-weight: bold;
     color: #fafafa;
 }
+
 ul {
     display: flex;
     justify-content: space-around;
