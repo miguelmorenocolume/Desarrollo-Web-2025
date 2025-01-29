@@ -61,6 +61,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     background-image: url('src/titulo.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     padding: 35px;
