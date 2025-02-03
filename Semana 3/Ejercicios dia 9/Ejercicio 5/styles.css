@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+div{
+    background-color: red;
+    border: 1px solid black;
+    width: 50vw;
+    height: 50vw;
+}
+
+@media print {
+    div {
+        background-color: green;
+    }
+}
