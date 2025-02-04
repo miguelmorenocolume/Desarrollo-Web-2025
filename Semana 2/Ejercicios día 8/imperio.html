@@ -4,26 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_bem.css">
     <title>paginawebsemana2</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="rebeldes.html">Rebeldes</a></li>
-                <li><a href="imperio.html">Imperio</a></li>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="rebeldes.html" class="nav__link">Rebeldes</a></li>
+                <li class="nav__item"><a href="imperio.html" class="nav__link">Imperio</a></li>
+                <li class="nav__item"><a href="jedi.html" class="nav__link">Jedi</a></li>
+                <li class="nav__item"><a href="sith.html" class="nav__link">Sith</a></li>
+                <li class="nav__item"><a href="galaxia.html" class="nav__link">Galaxia</a></li>
             </ul>
         </nav>
     </header>
-    <div id="titulo">
-        <img id="logo" src="src/icons8-empire-500.png" alt="">
-        <h2 id="h2sith">Primer Imperio Galáctico</h2>
+    <div class="title">
+        <img class="title__logo" src="src/icons8-empire-500.png" alt="">
+        <h2 class="subtitle subtitle--sith">Primer imperio galáctico</h2>
     </div>
-    <div class="sith">
-        <p>El Imperio Galáctico en Star Wars es una dictadura autoritaria que surgió tras la caída de la República
+    <div class="content content--empire">
+        <p class="content__text">El Imperio Galáctico en Star Wars es una dictadura autoritaria que surgió tras la caída de la República
             Galáctica. Fundado por el Emperador Palpatine, también conocido como Darth Sidious, el Imperio buscaba
             consolidar el poder absoluto y eliminar cualquier forma de resistencia. Bajo su régimen, se implementaron
             políticas de opresión y control total sobre los sistemas estelares. La fuerza militar del Imperio estaba
@@ -35,28 +38,28 @@
             del poder absoluto y la importancia de la resistencia frente a la tiranía.</p>
     </div>
 
-    <div class="container">
-        <div class="column_sith">
-            <div class="imagenes_column">
+    <div class="content content--container">
+        <div class="column column--empire">
+            <div class="column__images">
                 <img src="src/tie.jpg" alt="Darth Vader">
             </div>
-            <p>La flota del Imperio incluye los veloces y maniobrables TIE Fighters. Aunque carecen de escudos, su gran
+            <p class="content__text">La flota del Imperio incluye los veloces y maniobrables TIE Fighters. Aunque carecen de escudos, su gran
                 número y táctica de enjambre los hacen formidables en batalla.</p>
         </div>
-        <div class="column_sith">
-            <div class="imagenes_column">
+        <div class="column column--empire">
+            <div class="column__images">
                 <img src="src/vadersidious.jpg" alt="">
             </div>
-            <p>Los líderes del Imperio incluyen al Emperador Palpatine y su aprendiz Darth Vader. Palpatine transformó
+            <p class="content__text">Los líderes del Imperio incluyen al Emperador Palpatine y su aprendiz Darth Vader. Palpatine transformó
                 la República en el Imperio, y Vader, antes Anakin Skywalker, se convirtió en su ejecutor. Otros líderes
                 notables son el Gran Moff Tarkin y el Almirante Thrawn.</p>
 
         </div>
-        <div class="column_sith">
-            <div class="imagenes_column">
+        <div class="column column--empire">
+            <div class="column__images">
                 <img src="src/endor.jpg" alt="">
             </div>
-            <p>La derrota del Imperio en Endor se debió a la destrucción de la segunda Estrella de la Muerte por parte
+            <p class="content__text">La derrota del Imperio en Endor se debió a la destrucción de la segunda Estrella de la Muerte por parte
                 de la Alianza Rebelde en una batalla que decidió el futuro de la galaxia.
         </div>
     </div>
