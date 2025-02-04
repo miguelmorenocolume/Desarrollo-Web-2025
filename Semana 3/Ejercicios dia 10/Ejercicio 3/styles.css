@@ -1,0 +1,8 @@
+div{
+    border: 1px solid black;
+    width: 50vw;
+    height: 50vw;
+    padding: calc(2rem+ 5px);
+    background-color: blue;
+}
+

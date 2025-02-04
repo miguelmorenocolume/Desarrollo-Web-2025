@@ -1,0 +1,12 @@
+div{
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+
+p {
+    font-size: 1em;
+    margin: 1em 0;
+}
+
