@@ -1,0 +1,9 @@
+div{
+    background-color: blueviolet;
+    border: 1px solid black;
+    width:100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}

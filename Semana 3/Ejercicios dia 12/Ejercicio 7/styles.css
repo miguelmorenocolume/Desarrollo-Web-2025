@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+div{
+    background-color: blueviolet;
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1{
+    position: sticky;
+    top: 0px;
+    right: 0;
+    width: 100vw;
+    background-color: burlywood;
+    border: 1px solid black;
+}

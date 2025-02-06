@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+div{
+    background-color: blueviolet;
+    border: 1px solid black;
+    position: absolute;
+    width:50%;
+    height: 50%;
+    top: 50%;
+    right: 50%;
+}
+
+h1{
+    position: sticky;
+    top: 0px;
+    right: 0;
+    width: 100vw;
+    background-color: burlywood;
+    border: 1px solid black;
+}
