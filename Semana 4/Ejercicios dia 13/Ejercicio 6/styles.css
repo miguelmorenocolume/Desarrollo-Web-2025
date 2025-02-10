@@ -8,6 +8,7 @@ body {
     color: #e3e3d1;
 }
 
+/* Estilos del encabezado */
 .header {
     position: sticky;
     top: 0px;
@@ -44,17 +45,7 @@ body {
     transform: scale(1.1);
 }
 
-.title__video::-webkit-media-controls {
-    display: none !important;
-}
-
-.title__video {
-    pointer-events: none;
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
+/* Título principal */
 .title {
     display: flex;
     justify-content: center;
@@ -62,11 +53,13 @@ body {
     max-height: 350px;
     overflow: hidden;
     background-color: #444444;
+    position: relative;
 }
 
 .title__logo {
     position: absolute;
-    max-width: 20%;
+    width: 15%;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -74,77 +67,143 @@ body {
     transform: scale(1.2);
 }
 
-.main-content {
-    padding: 20px;
+/* Contenedor principal para la estructura de dos columnas */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;  /* Adjusted to give more space between sections */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.intro {
-    text-align: center;
+/* Estilos de la barra lateral */
+.blog-sidebar {
+    flex: 1;
+    width: 60%;
+    background-color: #3a3a3a;  /* Darker background for sidebar */
     padding: 20px;
-    background-color: #3a3a3a;
-    margin-bottom: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.blog-sidebar h2 {
+    color: #e3e3d1;  /* Lighter color for text */
+    text-align: center;
+}
+
+.blog-sidebar p {
+    color: #c0c0c0;  /* Softer text color */
+    text-align: justify;
+}
+
+/* Estilos de la lista de personajes */
 .characters {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    gap: 20px; /* Spacing between characters */
 }
 
+/* Ajustes en las tarjetas de personajes */
 .character {
-    flex: 1 1 30%;
-    margin: 10px;
-    padding: 20px;
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; 
+    padding: 15px;  /* Padding for better space inside */
+    background-color: #444444;  /* Dark background for character cards */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .character:hover {
-    transform: scale(1.005);
-}
-
-.character h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #b0b087;
-}
-
-.character h3 {
-    font-size: 1.2em;
-    margin-top: 15px;
-    color: #d9d977;
-    text-align: left;
-}
-
-.character p {
-    text-align: justify;
-    margin-bottom: 10px;
+    transform: scale(1.025);
 }
 
 .character img {
-    width: 100%;
+    width: 80%;
     height: auto;
-    max-height: 200px;
+    max-height: 180px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
+.character h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #d9d977;  /* Softer gold for titles */
+}
+
+.character h3 {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #b0b087;  /* Softer greenish tone */
+    text-align: left;
+}
+
+.character p {
+    text-align: justify;
+    font-size: 0.9em;
+    color: #c0c0c0;  /* Softer text color */
+    margin-bottom: 10px;
+}
+
+/* Estilos de la información dentro de cada personaje */
 .character-info {
     display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    gap: 20px;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 .column {
-    flex: 1;
     padding: 10px;
     border-radius: 10px;
     box-shadow: #2b2b2b 0 0 10px;
+    background-color: #3a3a3a;  /* Dark background for character info */
+}
+
+.column h3 {
+    color: #d9d977;
+}
+
+.column p {
+    color: #c0c0c0;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .characters {
+        width: 100%;
+        align-items: center;
+    }
+
+    .character {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .character {
+        width: 100%;
+    }
 }
