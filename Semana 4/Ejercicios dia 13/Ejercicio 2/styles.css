@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p {
+    width: 50vw;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.p1{
+    color: red;
+    position: relative;
+    top: 50px;
+    left: 25vw;
+}
+
+.p2{
+    color: blue;
+    position: relative;
+    bottom: 50px;
+    right: 25vw;
+}

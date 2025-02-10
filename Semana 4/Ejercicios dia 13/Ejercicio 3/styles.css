@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p {
+    width: 50vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.p1 {
+    color: red;
+    position: relative;
+    top: 50px;
+    left: 25vw;
+}
+
+.p2 {
+    color: blue;
+    position: relative;
+    bottom: 50px;
+    right: 25vw;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    width: 20vw;
+}
+
+.div1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: seagreen;
+}
+
+.div2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: violet;
+}
+
+.div3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+}
+
+.div4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: greenyellow;
+}
+
+.div5 {
+    position: absolute;
+    top: calc(50% - 10vw);
+    left: calc(50% - 10vw);
+    background-color: cyan;
+}
