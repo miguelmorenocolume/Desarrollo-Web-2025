@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: relative;
+    animation: move 4s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 0px;
+    }
+
+    25% {
+        left: 400px;
+    }
+
+    50% {
+        left: 0px;
+    }
+
+    75% {
+        left: -400px;
+    }
+
+    100% {
+        left: 0px;
+
+    }
+}

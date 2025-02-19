@@ -1,0 +1,9 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f1f1f1;
+    box-shadow: black 0px 0px 10px;
+    text-shadow: black 0px 0px 10px;
+}

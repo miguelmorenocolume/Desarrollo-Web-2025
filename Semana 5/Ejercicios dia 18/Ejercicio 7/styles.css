@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    margin: 100px;
+}
+
+.div1 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, red, yellow);
+}
+
+.div2 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, blue, green);
+}
+
+.div3{
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, purple, pink);
+}

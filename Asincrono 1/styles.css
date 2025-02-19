@@ -1,0 +1,184 @@
+/* Hace que el body ocupe toda la altura de la pantalla y organiza los elementos en columna */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centra el contenido en la página */
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    color: #848484;
+}
+/* Estilos para la barra de navegación */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+
+/* Estilos del logo en la barra */
+.nav-logo img {
+    margin-left: 50px;
+    margin-top: 5px;
+    height: 20px;
+}
+
+.menu-logo img {
+    margin-right: 50px;
+    margin-top: 5px;
+    height: 20px;
+}
+
+/* Centrar los enlaces en la barra de navegación */
+.social_media {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Estilos de los enlaces */
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Open Sans, sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animación de hover */
+.nav-links a:hover {
+    transform: scale(1.1);  /* Pequeño zoom */
+    color: #777;  /* Cambio a grisáceo */
+}
+
+/* La wrapper ocupa todo el espacio disponible y crece empujando el footer hacia abajo */
+.wrapper {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 300px);
+    grid-template-rows: repeat(6, 305.5px);
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+    padding: 0;
+    margin-top: 1250px;
+}
+
+/* Diseño de las cajas dentro de la cuadrícula */
+.box {
+    display: flex;
+    background-color: #444;
+    color: white;
+    font-size: 150%;
+    overflow: hidden;
+    align-items: center;
+}
+
+/* Ajusta las imágenes dentro de las cajas */
+.box img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en las imágenes */
+.box img:hover {
+    transform: translateY(-10px);
+}
+
+/* Clases específicas para la disposición en la cuadrícula */
+.a { grid-area: 1 / 1 / 1 / 1; }
+.b { grid-area: 1 / 2 / 2 / 2; }
+.c { grid-area: 1 / 3 / 3 / 4; }
+.e { grid-area: 1 / 5 / 3 / 7; }
+.i { grid-area: 3 / 1 / 5 / 3; }
+.l { grid-area: 3 / 5 / 5 / 6; }
+.q { grid-area: 5 / 1 / 6 / 3; }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin-top: -200px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.social_media{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    gap: 25px;
+    }
+
+    .social_media img {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        display: block;
+        transition: transform 0.3s ease-in-out;
+        margin-top: 200px;
+    }
+
+    .social_media img:hover {
+        transform: scale(1.1);
+}
+
+/* Estilos para el footer, que se mantiene abajo */
+footer {
+    width: 100%;
+    color: #444;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 13px;
+    line-height: 33px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #848484;
+    margin-top: 75px;
+}

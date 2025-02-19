@@ -1,0 +1,104 @@
+.wrapperF {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.wrapperF div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img1 {
+    background-color: red;
+
+}
+
+.img1 img{
+    mix-blend-mode: multiply;
+}
+
+.img2 {
+    background-color: red;
+}
+
+.img2 img{
+    mix-blend-mode: saturation;
+}
+
+.img3 {
+    background-color: red;
+}
+
+.img3 img{
+    mix-blend-mode: screen;
+}
+
+.img4 {
+    background-color: red;
+}
+
+.img4 img{
+    mix-blend-mode: color-burn;
+}
+
+.img5 {
+    background-color: red;
+}
+
+.img5 img{
+    mix-blend-mode: normal;
+}
+
+.img6 {
+    background-color: red;
+}
+
+.img6 img{
+    mix-blend-mode: difference;
+}
+
+.img7 {
+    background-color: red;
+}
+
+.img7 img{
+    mix-blend-mode: luminosity;
+}
+
+.img8 {
+    background-color: red;
+}
+
+.img8 img{
+    mix-blend-mode: hue;
+}
+
+.img9 {
+    background-color: red;
+}
+
+.img9 img{
+    mix-blend-mode: screen;
+}
+
+.img10 {
+    background-color: red;
+}
+
+.img10 img{
+    mix-blend-mode: exclusion;
+}

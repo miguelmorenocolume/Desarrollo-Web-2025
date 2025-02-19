@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    grid-auto-flow: column;
+}
+
+.box:nth-child(odd) {
+    background-color: darkslategray;
+    padding: 10px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.box{
+    padding: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    color: aliceblue;
+}

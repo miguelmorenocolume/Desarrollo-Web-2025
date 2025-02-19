@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+div{
+    height: 100px;
+    width: 100px;
+}
+
+.div1{
+    background-color: red;
+}
+
+.div2{
+    background-color: blue;
+}
+
+.div3{
+    background-color: green;
+}
+
+.div1:hover{
+    width: 200px;
+    transition: width 0.5s;
+}
+
+.div2:hover{
+    height: 200px;
+    transition: height 0.5s;
+}
+
+.div3:hover{
+    height: 200px;
+    width: 200px;
+    transition: width 0.5s;
+    transition: height 0.5s;
+}
