@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +9,103 @@
 </head>
 
 <!-- https://coolors.co/cfe8ef-c6dbf0-aed1e6-a0c4e2-85c7de -->
+
 <body>
+    <img class="logo" src="src/banner.png" alt="">
     <header class="header">
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">INICIO</a></li>
-                <li class="nav__item"><a href="noticias.html" class="nav__link">NOTICIAS</a></li>
+                <li class="nav__item"><a href="index.html" class="nav__link">NOTICIAS</a></li>
                 <li class="nav__item"><a href="usuario.html" class="nav__link">USUARIO</a></li>
                 <li class="nav__item"><a href="registro.html" class="nav__link">REGISTRO</a></li>
             </ul>
         </nav>
     </header>
-    <img class="logo" src="src/noticias.png" alt="logo_noticias">
+    <!-- Sección de Noticias -->
     <div class="wrapper">
-        <div class="box a">
-            <h1>NOTICIAS DE TODO EL MUNDO
-            </h1>
-            <p>Esta es una página web dedicada a mostrar noticias de todo el mundo. Aquí encontrarás las últimas actualizaciones y eventos importantes que están ocurriendo a nivel global.</p>
-        </div>
-        <div class="box b">
-            <h1>USUARIOS</h1>
-            <p>Puedes iniciar sesión para ver tus noticias favoritas y adaptadas a tus intereses.</p>
-        </div>
-        <div class="box c">
-            <h1>REGISTRO</h1>
-            <p>Si eres nuevo, no dudes en inciar sesión en el apartado de registro.</p>
+            <!-- Sección de Categorías -->
+    <aside class="categories box__categories box">
+        <h2>Categorías</h2>
+        <ul>
+            <li><a href="#espacio">Espacio</a></li>
+            <li><a href="#medicina">Medicina</a></li>
+            <li><a href="#inteligencia-artificial">Inteligencia Artificial</a></li>
+            <li><a href="#arqueologia">Arqueología</a></li>
+            <li><a href="#energia">Energía</a></li>
+            <li><a href="#oceanografia">Oceanografía</a></li>
+        </ul>
+    </aside>
+        <div class="box a" id="espacio">
+            <h1>Descubrimiento Espacial</h1>
+            <p>Un equipo de astrónomos ha descubierto un nuevo exoplaneta en la zona habitable de su estrella. Este
+                planeta, denominado Kepler-452b, tiene características similares a la Tierra y podría albergar vida. Los
+                científicos están emocionados por las posibilidades que este descubrimiento ofrece para futuras
+                investigaciones y la búsqueda de vida extraterrestre.</p>
+            <p>Según los estudios preliminares, Kepler-452b cuenta con una atmósfera rica en oxígeno y nitrógeno, lo que
+                aumenta las probabilidades de que pueda albergar organismos vivos. Además, la distancia entre el planeta
+                y su estrella permite la existencia de agua en estado líquido, un factor clave para el desarrollo de la
+                vida. La NASA ha anunciado futuras misiones para estudiar más a fondo la composición de este exoplaneta.
+            </p>
         </div>
 
-        <div class="box d">
-            <h1>D</h1>
-            <p>D</p>
+        <div class="box b" id="medicina">
+            <h1>Avances en Medicina</h1>
+            <p>Un grupo de investigadores ha desarrollado una nueva terapia genética que podría revolucionar el
+                tratamiento de enfermedades hereditarias. Este avance promete ofrecer una cura para dolencias como la
+                fibrosis quística y la distrofia muscular.</p>
+            <p>La terapia consiste en modificar el ADN defectuoso de los pacientes utilizando tecnología CRISPR,
+                permitiendo corregir los errores genéticos de manera precisa. En los ensayos clínicos, se ha observado
+                una mejora significativa en pacientes con enfermedades raras, lo que abre una nueva puerta para la
+                medicina personalizada. La comunidad científica celebra este avance como un hito en la lucha contra las
+                enfermedades genéticas.</p>
         </div>
+
+        <div class="box c" id="inteligencia-artificial">
+            <h1>Nuevo Avance en Inteligencia Artificial</h1>
+            <p>Investigadores han desarrollado un sistema de inteligencia artificial capaz de diagnosticar enfermedades
+                con mayor precisión que los médicos. Esta IA, basada en redes neuronales avanzadas, analiza imágenes
+                médicas y detecta anomalías con un 98% de precisión.</p>
+            <p>El software ha sido probado en hospitales de todo el mundo y ha demostrado ser capaz de identificar
+                tumores en etapas tempranas, permitiendo tratamientos más efectivos y menos invasivos. Los expertos en
+                salud creen que este avance revolucionará la forma en que se diagnostican las enfermedades en el futuro.
+            </p>
+        </div>
+
+        <div class="box d" id="arqueologia">
+            <h1>Descubrimiento Arqueológico en Egipto</h1>
+            <p>Un equipo de arqueólogos ha desenterrado una tumba intacta de más de 3.500 años de antigüedad en el Valle
+                de los Reyes, Egipto. Se cree que pertenece a un alto funcionario de la dinastía XVIII.</p>
+            <p>Dentro de la tumba, los investigadores encontraron una serie de objetos valiosos, incluidos amuletos de
+                oro, cerámica decorada y papiros con inscripciones jeroglíficas que podrían revelar nuevos detalles
+                sobre la vida en el antiguo Egipto. Este descubrimiento es considerado uno de los más importantes de la
+                última década y podría aportar información clave sobre las prácticas funerarias de la época.</p>
+            <img class="column__img" src="src/egipto.jpg" alt="egipto">
+        </div>
+
+        <div class="box e" id="energia">
+            <h1>Innovación en Energía Renovable</h1>
+            <p>Científicos han desarrollado un nuevo tipo de panel solar que puede generar electricidad incluso de
+                noche. Este innovador diseño utiliza la energía térmica emitida por la Tierra para seguir produciendo
+                electricidad cuando el Sol se ha puesto.</p>
+            <p>El avance podría transformar la industria de la energía renovable, permitiendo una producción constante
+                de electricidad y reduciendo la dependencia de combustibles fósiles. Las pruebas iniciales han mostrado
+                resultados prometedores, y se espera que esta tecnología esté disponible comercialmente en los próximos
+                años.</p>
+        </div>
+
+        <div class="box f" id="oceanografia">
+            <h1>Exploración en las Profundidades del Océano</h1>
+            <p>Un grupo de biólogos marinos ha descubierto una nueva especie de criatura luminiscente en la Fosa de las
+                Marianas, el punto más profundo del océano. Este animal, que emite destellos de luz azul y roja,
+                representa una adaptación evolutiva única para la vida en la oscuridad extrema.</p>
+            <p>Los científicos creen que el estudio de estos organismos podría aportar nuevos conocimientos sobre la
+                vida en condiciones extremas y ayudar en el desarrollo de tecnologías basadas en la bioluminiscencia. Se
+                están planeando futuras expediciones para explorar aún más la biodiversidad oculta en las profundidades
+                del océano.</p>
+                <img class="column__img" src="src/ocean.jpeg" alt="egipto">
+        </div>
+
     </div>
 </body>
+
 </html>

@@ -4,50 +4,42 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Centra el contenido en la página */
 body {
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-p{
+p {
     font-family: Open Sans, sans-serif;
     font-size: 15px;
     line-height: 24px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: none;
     color: #848484;
 }
+
 /* Estilos para la barra de navegación */
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px;
     z-index: 1000;
-    margin-top: 15px;
+    background-color: white;
+    padding: 10px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Estilos del logo en la barra */
-.nav-logo img {
-    margin-left: 50px;
-    margin-top: 5px;
-    height: 20px;
-}
-
-.menu-logo img {
-    margin-right: 50px;
-    margin-top: 5px;
-    height: 20px;
+.nav-logo img, .menu-logo img {
+    height: 25px;
 }
 
 /* Centrar los enlaces en la barra de navegación */
@@ -61,7 +53,7 @@ p{
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -70,7 +62,6 @@ p{
     display: inline;
 }
 
-/* Estilos de los enlaces */
 .nav-links a {
     color: #000;
     text-decoration: none;
@@ -79,23 +70,22 @@ p{
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Animación de hover */
 .nav-links a:hover {
-    transform: scale(1.1);  /* Pequeño zoom */
-    color: #777;  /* Cambio a grisáceo */
+    transform: scale(1.1);
+    color: #777;
 }
 
-/* La wrapper ocupa todo el espacio disponible y crece empujando el footer hacia abajo */
+/* Cuadrícula responsive */
 .wrapper {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(6, 300px);
-    grid-template-rows: repeat(6, 305.5px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
     background-color: #fff;
-    color: #444;
-    padding: 0;
-    margin-top: 1250px;
+    padding: 50px;
+    margin-top: 80px;
+    max-width: 1600px;
+    width: 100%;
 }
 
 /* Diseño de las cajas dentro de la cuadrícula */
@@ -106,79 +96,133 @@ p{
     font-size: 150%;
     overflow: hidden;
     align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
 }
 
-/* Ajusta las imágenes dentro de las cajas */
 .box img {
     width: 100%;
-    height: 110%;
+    height: 100%;
     object-fit: cover;
-    margin: 0;
-    padding: 0;
     display: block;
     transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
 }
 
-/* Efecto hover en las imágenes */
 .box img:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
-/* Clases específicas para la disposición en la cuadrícula */
-.a { grid-area: 1 / 1 / 1 / 1; }
-.b { grid-area: 1 / 2 / 2 / 2; }
-.c { grid-area: 1 / 3 / 3 / 4; }
-.e { grid-area: 1 / 5 / 3 / 7; }
-.i { grid-area: 3 / 1 / 5 / 3; }
-.l { grid-area: 3 / 5 / 5 / 6; }
-.q { grid-area: 5 / 1 / 6 / 3; }
-
+/* Contenido centrado */
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 400px;
-    margin-top: -200px;
-    margin-bottom: 50px;
     text-align: center;
+    margin-top: 50px;
 }
 
-.social_media{
+/* Iconos sociales */
+.social_media {
     display: flex;
-    flex-direction: row;
-    align-items: space-around;
-    gap: 25px;
-    }
-
-    .social_media img {
-        width: 20px;
-        height: 20px;
-        object-fit: cover;
-        margin: 0;
-        padding: 0;
-        display: block;
-        transition: transform 0.3s ease-in-out;
-        margin-top: 200px;
-    }
-
-    .social_media img:hover {
-        transform: scale(1.1);
+    gap: 20px;
 }
 
-/* Estilos para el footer, que se mantiene abajo */
+.social_media img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social_media img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
 footer {
     width: 100%;
-    color: #444;
-    text-align: center;
-    padding: 10px 0;
-    font-family: Open Sans, sans-serif;
-    font-size: 13px;
-    line-height: 33px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: capitalize;
     color: #848484;
-    margin-top: 75px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para pantallas grandes (1920px y más) */
+@media (min-width: 1920px) {
+    .wrapper {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 1800px;
+    }
+}
+
+/* Para pantallas medianas (1440px - 1919px) */
+@media (max-width: 1919px) {
+    .wrapper {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1400px;
+    }
+}
+
+/* Para pantallas de 1024px a 1439px */
+@media (max-width: 1439px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+    }
+}
+
+/* Para pantallas de 768px a 1023px */
+@media (max-width: 1023px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+    }
+}
+
+/* Para pantallas de 480px a 767px */
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social_media {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Para móviles (menos de 480px) */
+@media (max-width: 479px) {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 400px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
 }
