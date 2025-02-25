@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <script>
+        function mostrarPopup() {
+            var ancho = 800;
+            var alto = 450;
+            var izquierda = (screen.width - ancho) / 2;
+            var arriba = (screen.height - alto) / 2;
+            window.open("popup.html", "popup", "width=" + ancho + ",height=" + alto + ",left=" + izquierda + ",top=" + arriba);
+        }
+    </script>
 </head>
 
 <!-- https://coolors.co/cfe8ef-c6dbf0-aed1e6-a0c4e2-85c7de -->
@@ -13,29 +22,27 @@
 <body>
     <img class="logo" src="src/banner.png" alt="">
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" id="espacio">
             <ul class="nav__list">
                 <li class="nav__item"><a href="index.html" class="nav__link">NOTICIAS</a></li>
-                <li class="nav__item"><a href="usuario.html" class="nav__link">USUARIO</a></li>
+                <li class="nav__item"><a href="login.html" class="nav__link">USUARIO</a></li>
                 <li class="nav__item"><a href="registro.html" class="nav__link">REGISTRO</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Sección de Noticias -->
     <div class="wrapper">
-            <!-- Sección de Categorías -->
-    <aside class="categories box__categories box">
-        <h2>Categorías</h2>
-        <ul>
-            <li><a href="#espacio">Espacio</a></li>
-            <li><a href="#medicina">Medicina</a></li>
-            <li><a href="#inteligencia-artificial">Inteligencia Artificial</a></li>
-            <li><a href="#arqueologia">Arqueología</a></li>
-            <li><a href="#energia">Energía</a></li>
-            <li><a href="#oceanografia">Oceanografía</a></li>
-        </ul>
-    </aside>
-        <div class="box a" id="espacio">
+        <aside class="categories box__categories box">
+            <h2>Categorías</h2>
+            <ul>
+                <li><a href="#espacio">Espacio</a></li>
+                <li><a href="#medicina">Medicina</a></li>
+                <li><a href="#medicina">Inteligencia Artificial</a></li>
+                <li><a href="#espacio">Arqueología</a></li>
+                <li><a href="#energia">Energía</a></li>
+                <li><a href="#energia">Oceanografía</a></li>
+            </ul>
+        </aside>
+        <div class="box a" onclick="mostrarPopup()">
             <h1>Descubrimiento Espacial</h1>
             <p>Un equipo de astrónomos ha descubierto un nuevo exoplaneta en la zona habitable de su estrella. Este
                 planeta, denominado Kepler-452b, tiene características similares a la Tierra y podría albergar vida. Los
@@ -46,9 +53,10 @@
                 y su estrella permite la existencia de agua en estado líquido, un factor clave para el desarrollo de la
                 vida. La NASA ha anunciado futuras misiones para estudiar más a fondo la composición de este exoplaneta.
             </p>
+            <span id="medicina"></span>
         </div>
 
-        <div class="box b" id="medicina">
+        <div class="box b" onclick="mostrarPopup()">
             <h1>Avances en Medicina</h1>
             <p>Un grupo de investigadores ha desarrollado una nueva terapia genética que podría revolucionar el
                 tratamiento de enfermedades hereditarias. Este avance promete ofrecer una cura para dolencias como la
@@ -58,9 +66,10 @@
                 una mejora significativa en pacientes con enfermedades raras, lo que abre una nueva puerta para la
                 medicina personalizada. La comunidad científica celebra este avance como un hito en la lucha contra las
                 enfermedades genéticas.</p>
+                <span id="energia"></span>
         </div>
 
-        <div class="box c" id="inteligencia-artificial">
+        <div class="box c" id="inteligencia-artificial" onclick="mostrarPopup()">
             <h1>Nuevo Avance en Inteligencia Artificial</h1>
             <p>Investigadores han desarrollado un sistema de inteligencia artificial capaz de diagnosticar enfermedades
                 con mayor precisión que los médicos. Esta IA, basada en redes neuronales avanzadas, analiza imágenes
@@ -71,7 +80,7 @@
             </p>
         </div>
 
-        <div class="box d" id="arqueologia">
+        <div class="box d" onclick="mostrarPopup()">
             <h1>Descubrimiento Arqueológico en Egipto</h1>
             <p>Un equipo de arqueólogos ha desenterrado una tumba intacta de más de 3.500 años de antigüedad en el Valle
                 de los Reyes, Egipto. Se cree que pertenece a un alto funcionario de la dinastía XVIII.</p>
@@ -80,9 +89,10 @@
                 sobre la vida en el antiguo Egipto. Este descubrimiento es considerado uno de los más importantes de la
                 última década y podría aportar información clave sobre las prácticas funerarias de la época.</p>
             <img class="column__img" src="src/egipto.jpg" alt="egipto">
+           
         </div>
 
-        <div class="box e" id="energia">
+        <div class="box e"  onclick="mostrarPopup()">
             <h1>Innovación en Energía Renovable</h1>
             <p>Científicos han desarrollado un nuevo tipo de panel solar que puede generar electricidad incluso de
                 noche. Este innovador diseño utiliza la energía térmica emitida por la Tierra para seguir produciendo
@@ -93,7 +103,7 @@
                 años.</p>
         </div>
 
-        <div class="box f" id="oceanografia">
+        <div class="box f" id="oceanografia" onclick="mostrarPopup()">
             <h1>Exploración en las Profundidades del Océano</h1>
             <p>Un grupo de biólogos marinos ha descubierto una nueva especie de criatura luminiscente en la Fosa de las
                 Marianas, el punto más profundo del océano. Este animal, que emite destellos de luz azul y roja,
@@ -102,10 +112,14 @@
                 vida en condiciones extremas y ayudar en el desarrollo de tecnologías basadas en la bioluminiscencia. Se
                 están planeando futuras expediciones para explorar aún más la biodiversidad oculta en las profundidades
                 del océano.</p>
-                <img class="column__img" src="src/ocean.jpeg" alt="egipto">
+            <img class="column__img" src="src/ocean.jpeg" alt="egipto">
         </div>
 
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Miguel Moreno Columé. Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>
