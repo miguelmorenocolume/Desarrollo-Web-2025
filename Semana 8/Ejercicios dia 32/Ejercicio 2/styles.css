@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.parrafo {
+    font-size: 34px;
+    margin: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: brown;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
