@@ -1,0 +1,7 @@
+div{
+    transition: opacity 0.5s ease-in-out;
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid black;
+    background-color: springgreen;
+}

@@ -1,0 +1,18 @@
+body {
+    transition: background-color 0.5s ease-in-out;
+}
+
+p {
+    transition: color 0.5s ease-in-out;
+}
+
+div {
+    transition: border-color 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+
+div {
+    width: 20vw;
+    height: 10vw;
+    border: 1px solid black;
+}
