@@ -1,0 +1,33 @@
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox #background {
+    position: fixed;
+    background-color: #000000aa;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#lightbox img {
+    width: 70vw;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}

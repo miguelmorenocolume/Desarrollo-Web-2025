@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+<h1>Galería de imágenes</h1>
+
+    <div class="wrapper">
+        <img onclick="open_img('src/imagen.webp')" src="src/imagen.webp">
+        <img onclick="open_img('src/imagen2.jpg')" src="src/imagen2.jpg">
+        <img onclick="open_img('src/imagen3.avif')" src="src/imagen3.avif">
+        <img onclick="open_img('src/imagen4.webp')" src="src/imagen4.webp">
+        <img onclick="open_img('src/imagen5.webp')" src="src/imagen5.webp">
+        <img onclick="open_img('src/imagen6.jpg')" src="src/imagen6.jpg">
+    </div>
+    <div id="lightbox">
+        <div onclick="close_img()" id="background"></div>
+        <img src="src/imagen.webp">
+    </div>
+</body>
+
+</html>
