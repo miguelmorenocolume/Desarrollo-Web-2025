@@ -1,0 +1,98 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Estilo para las pestañas */
+.contenedor .ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none; 
+}
+
+.contenedor .li {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contenedor .li:hover {
+    background-color: #eaeaea;
+    transform: scale(1.05);
+}
+
+.contenedor .li.activo {
+    background-color: #3498db;
+    color: #fff;
+    border-color: #3498db;
+}
+
+/* Subcontenedor para los bloques */
+.contenedor .subcontenedor {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo para los bloques */
+.contenedor .bloque {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.4s ease, transform 0.5s ease;
+}
+
+/* Bloques activos */
+.contenedor .bloque.activo {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* Transición de difuminado del texto */
+.contenedor .bloque p {
+    opacity: 0;
+    transition: opacity 1.4s ease;
+}
+
+.contenedor .bloque.activo p {
+    opacity: 1;
+}

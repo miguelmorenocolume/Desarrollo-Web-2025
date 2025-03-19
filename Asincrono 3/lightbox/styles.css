@@ -1,0 +1,90 @@
+/* Contenedor principal para centrar la imagen */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Lightbox activo */
+#lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Imagen dentro del lightbox */
+#lightbox img {
+    width: 70vw;
+    max-width: 90%;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    border: 8px solid white;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6); 
+}
+
+/* Cuando se abre el lightbox */
+#lightbox.active img {
+    transform: scale(1);
+}
+
+/* Imagen principal */
+img {
+    max-width: 50%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 15px solid white; 
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6); 
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+img:hover {
+    transform: scale(0.95);
+}
+
+/* Botón de cierre sobre la imagen */
+#close-btn {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efecto al pasar el cursor */
+#close-btn:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
