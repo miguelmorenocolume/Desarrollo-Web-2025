@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #181818;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.slideshow-container {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.my-slides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.my-slides.fade {
+    transform: rotateY(90deg);
+    opacity: 0;
+}
+
+.my-slides.active {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.my-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 10px 10px;
+}
+
+.numbertext {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    padding: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    text-align: center;
+    user-select: none;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.dot-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: white;
+}

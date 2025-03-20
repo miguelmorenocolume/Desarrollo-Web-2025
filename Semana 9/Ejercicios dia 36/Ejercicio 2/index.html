@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="my-slides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="src/imagen.webp" style="width:100%">
+            <div class="text">Foto abstracta</div>
+        </div>
+    
+        <div class="my-slides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="src/imagen2.jpg" style="width:100%">
+            <div class="text">Foto de una hoja</div>
+        </div>
+    
+        <div class="my-slides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="src/imagen3.avif" style="width:100%">
+            <div class="text">Foto de la Luna</div>
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    
+</body>
+</html>
