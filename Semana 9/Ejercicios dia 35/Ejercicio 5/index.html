@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Contenedor principal que engloba el contenido de las pestañas y bloques -->
+    <div class="contenedor">
+        <!-- Lista desordenada para las pestañas -->
+        <ul class="ul">
+            <li class="li">Tab 1</li> <!-- Pestaña 1 -->
+            <li class="li">Tab 2</li> <!-- Pestaña 2 -->
+            <li class="li">Tab 3</li> <!-- Pestaña 3 -->
+            <li class="li">Tab 4</li> <!-- Pestaña 4 -->
+        </ul>
+
+        <!-- Subcontenedor que contiene los bloques de texto asociados a cada pestaña -->
+        <div class="subcontenedor">
+            <div class="bloque">
+                <div class="container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">Frente 1</div>
+                            <div class="flip-card-back" style="background-image: url('src/imagen.webp');"></div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">Frente 2</div>
+                            <div class="flip-card-back" style="background-image: url('src/imagen2.jpg');"></div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">Frente 3</div>
+                            <div class="flip-card-back" style="background-image: url('src/imagen3.avif');"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bloque">
+                <div class="container">
+                    <video autoplay loop muted width="640" height="360" controls>
+                        <source src="src/video.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="container">
+                    <h1>Adivina el Número</h1>
+                    <p>Introduce un número del 1 al 9:</p>
+                    <input type="number" id="userInput" min="1" max="9">
+                    <button onclick="checkNumber()">Adivinar</button>
+                    <div class="message" id="resultMessage"></div>
+
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="container">
+                    <div id="particles-js"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
