@@ -1,0 +1,121 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    overflow: hidden;
+}
+
+/* Container styles */
+.carrousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff, #e6e6fa);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Carrousel wrapper */
+.carrousel-wrapper {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+/* Individual carrousel items */
+.carrousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #e6f7ff, #b3daff);
+    border-radius: 15px;
+    margin: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+    opacity: 0.9;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 123, 255, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carrousel-item:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+}
+
+.carrousel-item span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007BFF;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.carrousel-item:hover span {
+    color: #004080;
+    text-shadow: 2px 2px 6px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons for navigation */
+.carrousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.7);
+    color: white;
+    padding: 12px;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrousel-btn.left {
+    left: 20px;
+}
+
+.carrousel-btn.right {
+    right: 20px;
+}
+
+.carrousel-btn:hover {
+    background-color: rgba(0, 123, 255, 0.9);
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+    .carrousel-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .carrousel-item {
+        width: 50%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .carrousel-item {
+        width: 100%;
+        padding: 20px;
+    }
+}
+    
