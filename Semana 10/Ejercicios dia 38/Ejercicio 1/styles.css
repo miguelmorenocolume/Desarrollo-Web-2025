@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 200vh; 
+    background-color: #87CEEB;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sky {
+    position: absolute;
+    width: 120%; 
+    height: 100vh;
+    top: 0;
+    left: -75px;
+    z-index: 1;
+}
+
+#sky img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mountains {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    top: 10vw;
+    z-index: 2;
+}
+
+.mountains img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
