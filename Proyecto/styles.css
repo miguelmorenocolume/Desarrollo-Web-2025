@@ -11,18 +11,17 @@ body {
 }
 
 h1 {
-    font-size: 46px;
+    font-size: 4.75em;
     color: white;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 span {
-    color: #c5d0f4;
+    color: #4070f4;
 }
 
 p {
-    font-size: 20px;
+    font-size: 2em;
     color: white;
     margin: 0;
 }
@@ -38,7 +37,7 @@ p {
 
 .container-content .text {
     position: relative;
-    color: #c5d0f4;
+    color: #4070f4;
     font-size: 24px;
     font-weight: 600;
 }
@@ -49,16 +48,24 @@ p {
 
 .text.sec-text:before {
     content: "";
-    position: absoulute;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%;  
+    height: 100%;
     width: 100%;
     background-color: black;
-    border-left: 2px solid #c5d0f4;
-    animation:animate 4s steps(12) infinite;
+    border-left: 2px solid white;
+    animation: animate 6s steps(20) infinite;
 }
 
-@keyframes animate{
+@keyframes animate {
 
+    40%,
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
 }
