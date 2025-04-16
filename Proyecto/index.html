@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-    <title>Miguel Moreno | Portfolio </title>
+    <title>Miguel Moreno | Portfolio</title>
 </head>
 
-<body>
-    <div class="container">
-        <h1>Miguel <span>Moreno</span></h1>
-        <div class="container-content">
-            <span class="text first-text">I'm a</span>
-            <span class="text sec-text">Fullstack Developer</span>
-        </div>
+<body class="body">
+    <div class="body__background">
+        <img id="background" class="body__background-image" src="src/img/background.jpg" alt="" loading="lazy"
+            aria-hidden="true" />
     </div>
+
+    <header class="header">
+        <img class="header__icon" src="src/icons/menu_icon_white.svg" alt="Icono del menú" loading="lazy" />
+    </header>
+
+    <main class="main-page__container">
+        <h1 class="main-page__container-title">Miguel Moreno</h1>
+        <p class="main-page__container-subtitle">Software Developer</p>
+
+    </main>
+
+    <div class="arrow-container">
+        <img class="arrow" src="src/icons/arrow_down.svg" alt="Flecha animada hacia abajo" loading="lazy" />
+    </div>
+
 </body>
 
 </html>

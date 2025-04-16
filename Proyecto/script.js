@@ -1,16 +1,22 @@
-const text = document.querySelector('.sec-text');
+(function() {
 
-const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = 'Fullstack Developer';
-    }, 0);
-    setTimeout(() => {
-        text.textContent = 'Software Developer';
-    }, 6000);
-    setTimeout(() => {
-        text.textContent = 'Data Engineer';
-    }, 12000);
-};
+    // Seleccionamos el elemento de fondo una sola vez
+    const background = document.getElementById("background");
 
-textLoad();
-setInterval(textLoad, 18000);
+    // Parallax effect
+    document.addEventListener("mousemove", function (event) {
+        let windowWidth = window.innerWidth;
+        let windowHeight = window.innerHeight;
+        let mouseX = event.clientX;
+        let mouseY = event.clientY;
+
+        let moveAmountX = (mouseX - windowWidth / 2) * 0.01; // Reduced movement
+        let moveAmountY = (mouseY - windowHeight / 2) * 0.01; // Reduced movement
+
+        // Usamos requestAnimationFrame para mejorar la fluidez
+        requestAnimationFrame(() => {
+            background.style.transform = `translate(${moveAmountX}px, ${moveAmountY}px)`;
+        });
+    });
+
+})();
