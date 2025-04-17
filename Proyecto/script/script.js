@@ -56,4 +56,55 @@
     });
 
 
+    // Logica para el menu de hambuguesa
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.querySelector(".header__icon");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeButton = document.getElementById("closeMenu");
+        const header = document.querySelector(".header");
+        const mainContainer = document.querySelector(".main-page__container");
+        const aboutContainer = document.querySelector(".about-page__container");
+    
+        menuIcon?.addEventListener("click", () => {
+            mobileMenu.classList.add("open");
+            header.classList.add("hiden");
+    
+            const menuWidth = window.getComputedStyle(mobileMenu).width;
+            const viewportWidth = window.innerWidth + 'px';
+    
+            if (menuWidth === viewportWidth) {
+                if (mainContainer) {
+                    mainContainer.style.opacity = "0";
+                    mainContainer.style.visibility = "hidden";
+                    mainContainer.style.pointerEvents = "none";
+                }
+    
+                if (aboutContainer) {
+                    aboutContainer.style.visibility = "hidden";
+                    aboutContainer.style.pointerEvents = "none";
+                }
+            }
+        });
+    
+        closeButton?.addEventListener("click", () => {
+            mobileMenu.classList.remove("open");
+            header.classList.remove("hiden");
+    
+            if (mainContainer) {
+                mainContainer.style.opacity = "1";
+                mainContainer.style.visibility = "visible";
+                mainContainer.style.pointerEvents = "auto";
+            }
+    
+            if (aboutContainer) {
+                aboutContainer.style.visibility = "visible";
+                aboutContainer.style.pointerEvents = "auto";
+            }
+        });
+    });
+    
+
+
+
+
 })();
