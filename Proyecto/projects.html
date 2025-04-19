@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script/script.js" defer></script>
+    <title>Miguel Moreno | Portfolio</title>
+</head>
+
+<body class="body regular-page">
+    <div class="body__background">
+        <img id="background" class="body__background-image" src="src/img/background.jpg" alt="" loading="lazy"
+            aria-hidden="true" />
+    </div>
+
+    <header class="header">
+        <img class="header__icon" src="src/icons/menu_icon_white.svg" alt="Icono del menú" loading="lazy" />
+        <div>
+            <nav>
+                <ul class="header__nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="about.html">SOBRE MÍ</a></li>
+                    <li><a href="#habilidades">HABILIDADES</a></li>
+                    <li><a href="#Educación">EDUCACIÓN</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#cv">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="closeMenu" aria-label="Cerrar menú">
+            <img src="src/icons/close_icon.svg" alt="Cerrar menú" class="mobile-menu__close-icon" />
+        </button>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#Educación">Educación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#cv">Cv</a></li>
+        </ul>
+    </nav>
+    <section class="projects-page__container general-page__container">
+        <h2 class="projects-title">MIS PROYECTOS</h2>
+        <div class="project-box">
+            <div class="project-card">
+                <img src="src/img/light_has_no_shadows_logo.jpg" alt="Light has no Shadows" />
+                <div class="project-text">
+                    <h3>Light has no Shadows</h3>
+                    <p>Videojuego 3D con temática de terror psicológico. La historia del juego es totalmente original y
+                        el jugador será capaz de entenderla a través de interacciones con el escenario y diferentes
+                        eventos que suceden a lo largo de la experiencia de juego. Presentado como proyecto final en el
+                        Grado Superior DAM.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="src/img/data_of_thrones_logo.jpg" alt="DataOfThrones" />
+                <div class="project-text">
+                    <h3>DataOfThrones</h3>
+                    <p>Aplicación completa para dispositivos móviles escrita en Kotlin desarrollada en Android Studio
+                        que accede a una API pública de Juego de Tronos con varias funcionalidades que permiten acceder
+                        a un listado de personajes, ver sus detalles, añadirlos a favoritos entre otras.</p>
+                </div>
+            </div>
+
+            <div class="project-divider">
+                <p>trabajando en más proyectos...</p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Lightbox para "Light has no Shadows" -->
+    <div id="modal-light" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" data-target="modal-light" aria-label="Cerrar modal">
+                <img src="src/icons/close_icon.svg" alt="Cerrar" class="modal-close-icon" />
+            </button>
+            <h3>Light has no Shadows</h3>
+            <p>Videojuego 3D de terror psicológico con historia interactiva. Jugabilidad basada en la exploración y la
+                narrativa ambiental.</p>
+            <!-- Puedes añadir más contenido aquí: imágenes, vídeos, etc. -->
+        </div>
+    </div>
+
+    <!-- Lightbox para "DataOfThrones" -->
+    <div id="modal-data" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" data-target="modal-data" aria-label="Cerrar modal">
+                <img src="src/icons/close_icon.svg" alt="Cerrar" class="modal-close-icon" />
+            </button>
+            <h3>DataOfThrones</h3>
+            <p>App móvil hecha en Kotlin que consume una API pública de Juego de Tronos. Permite buscar personajes, ver
+                detalles, y favoritos.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

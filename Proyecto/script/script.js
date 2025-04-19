@@ -62,49 +62,59 @@
         const mobileMenu = document.getElementById("mobileMenu");
         const closeButton = document.getElementById("closeMenu");
         const header = document.querySelector(".header");
-        const mainContainer = document.querySelector(".main-page__container");
-        const aboutContainer = document.querySelector(".about-page__container");
-    
+        const generalContainer = document.querySelector(".general-page__container");
+
         menuIcon?.addEventListener("click", () => {
             mobileMenu.classList.add("open");
             header.classList.add("hiden");
-    
+
             const menuWidth = window.getComputedStyle(mobileMenu).width;
             const viewportWidth = window.innerWidth + 'px';
-    
-            if (menuWidth === viewportWidth) {
-                if (mainContainer) {
-                    mainContainer.style.opacity = "0";
-                    mainContainer.style.visibility = "hidden";
-                    mainContainer.style.pointerEvents = "none";
-                }
-    
-                if (aboutContainer) {
-                    aboutContainer.style.visibility = "hidden";
-                    aboutContainer.style.pointerEvents = "none";
-                }
+
+            if (menuWidth === viewportWidth && generalContainer) {
+                generalContainer.style.opacity = "0";
+                generalContainer.style.visibility = "hidden";
+                generalContainer.style.pointerEvents = "none";
             }
         });
-    
+
         closeButton?.addEventListener("click", () => {
             mobileMenu.classList.remove("open");
             header.classList.remove("hiden");
-    
-            if (mainContainer) {
-                mainContainer.style.opacity = "1";
-                mainContainer.style.visibility = "visible";
-                mainContainer.style.pointerEvents = "auto";
-            }
-    
-            if (aboutContainer) {
-                aboutContainer.style.visibility = "visible";
-                aboutContainer.style.pointerEvents = "auto";
+
+            if (generalContainer) {
+                generalContainer.style.opacity = "1";
+                generalContainer.style.visibility = "visible";
+                generalContainer.style.pointerEvents = "auto";
             }
         });
     });
-    
 
+    // Abrir el modal al hacer clic en un proyecto
+    document.querySelectorAll('.project-card').forEach((card, index) => {
+        card.addEventListener('click', () => {
+            const modalId = index === 0 ? 'modal-light' : 'modal-data';
+            document.getElementById(modalId).style.display = 'flex';
+        });
+    });
 
+    // Cerrar el modal al hacer clic en el botón SVG
+    document.querySelectorAll('.modal-close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            const targetId = closeBtn.getAttribute('data-target');
+            const modal = document.getElementById(targetId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // También cerrar al hacer clic fuera del contenido del modal
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
 
 
 })();
