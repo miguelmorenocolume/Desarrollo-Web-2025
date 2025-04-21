@@ -89,32 +89,51 @@
             }
         });
     });
-
-    // Abrir el modal al hacer clic en un proyecto
-    document.querySelectorAll('.project-card').forEach((card, index) => {
-        card.addEventListener('click', () => {
-            const modalId = index === 0 ? 'modal-light' : 'modal-data';
-            document.getElementById(modalId).style.display = 'flex';
-        });
-    });
-
-    // Cerrar el modal al hacer clic en el botón SVG
-    document.querySelectorAll('.modal-close').forEach(closeBtn => {
-        closeBtn.addEventListener('click', () => {
-            const targetId = closeBtn.getAttribute('data-target');
-            const modal = document.getElementById(targetId);
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-
-    // También cerrar al hacer clic fuera del contenido del modal
-    window.addEventListener('click', (e) => {
-        if (e.target.classList.contains('modal')) {
-            e.target.style.display = 'none';
+// Abrir el modal al hacer clic en un proyecto
+document.querySelectorAll('.project-card').forEach((card, index) => {
+    const modals = ['modal-light', 'modal-data', 'modal-django']; // array con todos los IDs
+    card.addEventListener('click', () => {
+        const modalId = modals[index];
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.classList.add('body-no-scroll'); // Bloquear scroll del body
         }
     });
+});
+
+// Función para cerrar modal y pausar iframe si hay video
+function closeModal(modal) {
+    if (modal) {
+        modal.style.display = 'none';
+
+        // Pausar el video si hay iframe
+        const iframe = modal.querySelector('iframe');
+        if (iframe) {
+            const src = iframe.src;
+            iframe.src = '';
+            iframe.src = src;
+        }
+
+        document.body.classList.remove('body-no-scroll'); // Restaurar scroll del body
+    }
+}
+
+// Cerrar el modal al hacer clic en el botón SVG
+document.querySelectorAll('.modal-close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+        const targetId = closeBtn.getAttribute('data-target');
+        const modal = document.getElementById(targetId);
+        closeModal(modal);
+    });
+});
+
+// También cerrar al hacer clic fuera del contenido del modal
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        closeModal(e.target);
+    }
+});
 
 
 })();
